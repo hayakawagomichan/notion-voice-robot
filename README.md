@@ -1,5 +1,9 @@
 # しゃべれる Notion タスク投入ロボ
 
+<p align="center">
+  <img src="docs/photo.png" alt="完成写真: アイアンコロッサス筐体に ATOM S3 の顔表示" width="220">
+</p>
+
 M5Stack ATOM EchoS3R + ATOM S3 を使った、音声でNotion Custom Agentにタスクを投入するデモシステム。
 
 ## 動作フロー
@@ -29,9 +33,11 @@ notion-voice-robot/
 │   ├── src/main.cpp            VAD録音 → WAV POST → TTS再生
 │   └── include/
 │       └── config.example.h    → config.h にコピーして Wi-Fi / サーバIP を設定
-└── firmware-atoms3/            ATOM S3 (PlatformIO / Arduino)
-    └── src/main.cpp            128x128 LCD に "Ready" を表示するプレースホルダ
-                                (顔画像は同梱せず — 任意の画像を追加可能)
+├── firmware-atoms3/            ATOM S3 (PlatformIO / Arduino)
+│   └── src/main.cpp            128x128 LCD に "Ready" を表示するプレースホルダ
+│                               (顔画像は同梱せず — 任意の画像を追加可能)
+└── hardware/
+    └── iron-colossus.3mf       筐体3Dモデル (Meshy AI 生成)
 ```
 
 ## セットアップ
@@ -134,6 +140,9 @@ pio run -t upload
 ### ATOM S3
 - ESP32-S3
 - 0.85" 128x128 IPS LCD (GC9107)
+
+### 筐体 (任意)
+`hardware/iron-colossus.3mf` に Meshy AI で生成した筐体モデルを同梱しています。Bambu Studio / PrusaSlicer 等で開いてスライス → 印刷可能。ATOM EchoS3R / ATOM S3 をマウントできる開口を想定したサイズ感ですが、現物合わせで調整してください。お好みで別の筐体を使ってもOKです。
 
 ## 技術スタック
 
