@@ -37,7 +37,7 @@ notion-voice-robot/
 │   └── src/main.cpp            128x128 LCD に "Ready" を表示するプレースホルダ
 │                               (顔画像は同梱せず — 任意の画像を追加可能)
 └── hardware/
-    └── iron-colossus.3mf       筐体3Dモデル (Meshy AI 生成)
+    └── iron-colossus.stl       筐体3Dモデル (Meshy AI 生成)
 ```
 
 ## セットアップ
@@ -142,7 +142,7 @@ pio run -t upload
 - 0.85" 128x128 IPS LCD (GC9107)
 
 ### 筐体 (任意)
-`hardware/iron-colossus.3mf` に Meshy AI で生成した筐体モデルを同梱しています。Bambu Studio / PrusaSlicer 等で開いてスライス → 印刷可能。ATOM EchoS3R / ATOM S3 をマウントできる開口を想定したサイズ感ですが、現物合わせで調整してください。お好みで別の筐体を使ってもOKです。
+`hardware/iron-colossus.stl` に Meshy AI で生成した筐体モデル (STL) を同梱しています。Bambu Studio / PrusaSlicer 等でスライス → 印刷可能。ATOM EchoS3R / ATOM S3 をマウントできる開口を想定したサイズ感ですが、現物合わせで調整してください。お好みで別の筐体を使ってもOKです。
 
 ## 技術スタック
 
