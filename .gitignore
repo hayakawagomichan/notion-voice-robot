@@ -1,0 +1,37 @@
+# 環境変数・シークレット
+.env
+.env.*
+!.env.example
+
+# Node.js
+node_modules/
+dist/
+*.log
+npm-debug.log*
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+.vscode/
+
+# ビルド成果物
+*.o
+*.bin
+*.elf
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+*.swp
+.claude/
+
+# Notion Agents SDK (ローカルclone, 再取得可能)
+server/notion-agents-sdk-js/
+
+# firmware の機密 (Wi-Fi等)
+firmware-echos3r/include/config.h
